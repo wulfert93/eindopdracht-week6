@@ -2,72 +2,56 @@ import React, {Component} from 'react';
 import Grading from '../resource/data';
 import average from '../resource/gemiddelden';
 import * as V from 'victory';
-
-// const Grading = Data.Grading;
+import Student from './Student';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 class Dashboard extends Component {
     render() {
-        //const allData = Array.from(Grading).map(item => (`Naam: ${item.Naam}, Opdracht: ${item.Opdracht}, Moeilijkheid: ${item.Moeilijk}, Leuk: ${item.Leuk}`));
-        //const allNames = Array.from(Grading).map(item => (`Naam: ${item.Naam}`));
-        //const allAssignments = Array.from(Grading).map(item => (`Opdracht: ${item.Opdracht}`));
-        //const allDifficulties = Array.from(Grading).map(item => (`Moeilijkheid: ${item.Moeilijk}`));
-        //const difficultiesNumbers = allDifficulties.toString().charAt(3);
-        //const newNames = Grading.Naam;
-        //const allNice = Array.from(Grading).map(item => (`Leuk: ${item.Leuk}`));
-
-        //for (let i =0; i <allData.length; i++)
-        //{
-            //console.log(`i: ${allData[i]}`);
-   
-
+        const allNames = (Grading).map(item => (`Naam: ${item.Naam}`));
         const av = average;
-        console.log(av);
-        const grading = Grading;
-        console.log(grading);
-        //const arr = Array.from(Grading);
-        // const Naam = 
+        const namen = [
+            {id: 0, naam: "Evelyn"},
+            {id: 1, naam: "Aranka"},
+            {id: 2, naam: "Floris"},
+            {id: 3, naam: "Hector"},
+            {id: 4, naam: "Martina"},
+            {id: 5, naam: "Maurits"},
+            {id: 6, naam: "Rahima"},
+            {id: 7, naam: "Sandra"},
+            {id: 8, naam: "Wietske"},
+            {id: 9, naam: "Storm"}
+        ];
+        const Evelyn =  Grading.filter(function(deel) {
+            return deel.Naam == "Evelyn";
+        });
         return (
-        //console.log(`Grading: ${Grading}`)
             <div>
-                <h1>Dashboard</h1>
                 <ul>
-                    <h2>Moeilijkheid</h2>
-                    <V.VictoryChart>
-                        
+                {namen.forEach(element => <li>{(element.naam)}</li>)}
+                </ul>
+                
+                <h1>Dashboard</h1>
+                <h2>Moeilijkheid</h2>
+                <V.VictoryChart>
                     <V.VictoryBar data={av}
                     x="Opdracht"
                     y="Leuk"
-                    // style={
-                    //      {
-                    //       fill: ({ datum }) => datum.fill,
-                    //       opacity: ({ datum }) => datum.opacity
-                    //     }
                     />
-
                     </V.VictoryChart>
                     <h2>Leukheid</h2>
                     <V.VictoryChart>
                     <V.VictoryBar data={av}
                     x="Opdracht"
                     y="Moeilijk"
-                    // style={
-                    //      {
-                    //       fill: ({ datum }) => datum.fill,
-                    //       opacity: ({ datum }) => datum.opacity
-                    //     }
                     />
-                    </V.VictoryChart>
-                {/* <VictoryChart> */}
-                    {/* <VictoryBar
-                    data={data}
-                    x="quarter"
-                    y="earnings"
-                    />
-                </VictoryChart> */}
-                {/* {allData} */}
-                </ul>
+                </V.VictoryChart>
             </div>
-        );
-        }
-    }
+                );
+            }
+}
   export default Dashboard;
