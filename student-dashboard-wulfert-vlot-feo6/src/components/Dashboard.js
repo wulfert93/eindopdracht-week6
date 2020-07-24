@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import Grading from '../resource/data';
 import average from '../resource/gemiddelden';
 import * as V from 'victory';
-import Student from './Student';
+import Graph from './StudentGraph'
+import studentGraph from './Student';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
-
 class Dashboard extends Component {
     constructor(props) {
         super(props);
@@ -102,6 +102,7 @@ class Dashboard extends Component {
             //console.log(`${typeof Storm}, ${typeof event.target.innerText}`);
             this.setState({naam: Maurits});
             event.preventDefault();
+            console.log(Evelyn)
         }
         const handleClickRahima = (event) => {
             
@@ -132,7 +133,7 @@ class Dashboard extends Component {
             event.preventDefault();
         }
         
-        console.log(`currentstate: ${this.state.naam}`);
+        //console.log(`currentstate: ${this.state.naam}`);
         // function handleClick(e) {
         //     e.preventDefault();
         //     console.log(`The link was clicked.: ${this.state.naam}`);
@@ -140,12 +141,14 @@ class Dashboard extends Component {
         return (
             <div>
                 <ul>
+                Klik op een naam voor de bijbehorende resultaten
                 {/* {namen.forEach(item => console.log('banaan'))} */} 
-                <li onClick={handleClickEvlyn}>Evelyn</li>
+                <li onClick={handleClickEvlyn}>Evelyn   </li>
                 <li onClick={handleClickAranka}>Aranka</li>
                 <li onClick={handleClickFloris}>Floris</li>
                 <li onClick={handleClickHector}>Hector</li>
                 <li onClick={handleClickMartina}>Martina</li>
+                <li onClick={handleClickMaurits}>Maurits</li>
                 <li onClick={handleClickRahima}>Rahima</li>
                 <li onClick={handleClickSandra}>Sandra</li>
                 <li onClick={handleClickWietske}>Wietske</li>
@@ -154,7 +157,10 @@ class Dashboard extends Component {
                 </ul>
                 <h1>Dashboard</h1>
                 <h2>Moeilijkheid</h2>
-                <V.VictoryChart>
+                <V.VictoryChart
+                
+                
+                >
                     <V.VictoryBar data={this.state.naam}
                     x="Opdracht"
                     y="Leuk"

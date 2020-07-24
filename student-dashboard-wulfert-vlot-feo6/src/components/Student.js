@@ -9,19 +9,16 @@ const Student = (props) => {
         {props.naam}
         <h2>Moeilijkheid</h2>
                     <V.VictoryChart>
-                        
                     <V.VictoryBar data={naam}
                     x="Opdracht"
                     y="Leuk"
                     />
-
                     </V.VictoryChart>
                     <h2>Leukheid</h2>
                     <V.VictoryChart>
                     <V.VictoryBar data={naam}
                     x="Opdracht"
                     y="Moeilijk"
-
                     />
                     </V.VictoryChart>
       </div>
