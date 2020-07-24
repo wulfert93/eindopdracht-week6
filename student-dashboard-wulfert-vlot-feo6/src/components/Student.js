@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Grading from '../resource/data';
 import * as V from 'victory';
 
 const Student = (props) => {
