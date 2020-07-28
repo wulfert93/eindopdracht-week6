@@ -62,67 +62,52 @@ class Dashboard extends Component {
         const Storm =  Grading.filter(function(deel) {
             return deel.Naam === "Storm";
         });
-        const handleClickEvlyn = (event) => {
-            this.setState({naam: Evelyn});
-            event.preventDefault();
-        }
-        const handleClickAranka = (event) => {
-            this.setState({naam: Aranka});
-            event.preventDefault();
-        }
-        const handleClickFloris = (event) => {
-            this.setState({naam: Floris});
-            event.preventDefault();
-        }
-        const handleClickHector = (event) => {
-            this.setState({naam: Hector});
-            event.preventDefault();
-        }
-        const handleClickMartina = (event) => {
-            this.setState({naam: Martina});
-            event.preventDefault();
-        }
-        const handleClickMaurits = (event) => {
-            this.setState({naam: Maurits});
-            event.preventDefault();
-        }
-        const handleClickRahima = (event) => {
-            this.setState({naam: Rahima});
-            event.preventDefault();
-        }
-        const handleClickSandra = (event) => {
-            this.setState({naam: Sandra});
-            event.preventDefault();
-        }
-        const handleClickWietske = (event) => {
-            this.setState({naam: Wietske});
-            event.preventDefault();
-        }
-        const handleClickStorm = (event) => {
-            this.setState({naam: Storm});
-            event.preventDefault();
-        }
+        // const handleClickEvlyn = (event) => {
+        //     this.setState({naam: Evelyn});
+        //     event.preventDefault();
+        // }
+        // const handleClickAranka = (event) => {
+        //     this.setState({naam: Aranka});
+        //     event.preventDefault();
+        // }
+        // const handleClickFloris = (event) => {
+        //     this.setState({naam: Floris});
+        //     event.preventDefault();
+        // }
+        // const handleClickHector = (event) => {
+        //     this.setState({naam: Hector});
+        //     event.preventDefault();
+        // }
+        // const handleClickMartina = (event) => {
+        //     this.setState({naam: Martina});
+        //     event.preventDefault();
+        // }
+        // const handleClickMaurits = (event) => {
+        //     this.setState({naam: Maurits});
+        //     event.preventDefault();
+        // }
+        // const handleClickRahima = (event) => {
+        //     this.setState({naam: Rahima});
+        //     event.preventDefault();
+        // }
+        // const handleClickSandra = (event) => {
+        //     this.setState({naam: Sandra});
+        //     event.preventDefault();
+        // }
+        // const handleClickWietske = (event) => {
+        //     this.setState({naam: Wietske});
+        //     event.preventDefault();
+        // }
+        // const handleClickStorm = (event) => {
+        //     this.setState({naam: Storm});
+        //     event.preventDefault();
+        // }
         return (
             <div>
-                <Nav/>
-                <ul>
-                    Klik op een naam voor de bijbehorende resultaten
-                    <Router>
-                        <Route path="/Evelyn" component={Student}/>
-                        <li onClick={handleClickAranka}>Aranka</li>
-                        <li onClick={handleClickFloris}>Floris</li>
-                        <li onClick={handleClickHector}>Hector</li>
-                        <li onClick={handleClickMartina}>Martina</li>
-                        <li onClick={handleClickMaurits}>Maurits</li>
-                        <li onClick={handleClickRahima}>Rahima</li>
-                        <li onClick={handleClickSandra}>Sandra</li>
-                        <li onClick={handleClickWietske}>Wietske</li>
-                        <li onClick={handleClickStorm}>Storm</li>
-                    </Router>
-                </ul>
+                
                 <h1>Dashboard</h1>
-                <h2>Moeilijkheid</h2>
-                <Student dataset={this.state.naam}/>
+                {/* <h2>Moeilijkheid</h2> */}
+                {/* <Student dataset={this.state.naam}/> */}
                 {/* <V.VictoryChart
                 >
                     <V.VictoryBar data={av}

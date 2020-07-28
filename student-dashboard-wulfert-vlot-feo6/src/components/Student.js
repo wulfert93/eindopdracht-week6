@@ -1,33 +1,49 @@
 import React, {Component} from 'react';
 import * as V from 'victory';
 import average from '../resource/gemiddelden';
+import Grading from '../resource/data';
 
-const Student = (props) => {
-  console.log(`props from Student.js: ${typeof props}`)
-  console.log(`props from dataset in Student.js: ${typeof props.dataset}`)
-  //console.log(`props naam: ${props.location.aboutProps}`);
+class Student extends Component{
+  constructor(props){
+    super(props)
+    this.state = {name: props.name};
+  }
+  render(){
+    console.log(this.state.name)
+    const name = this.state.name;
+    const query =  Grading.filter(function(deel) 
+    {
+      return deel.Naam === name;
+    });
   return (
-      <div>
-        {/* {props.dataset}
+    <div>
+        <h1>Student Component</h1>
+        {this.props.name}
+        
 
-{/*        
-        <h2>Moeilijkheid</h2> */}
+
+
                     <V.VictoryChart>
-                    <V.VictoryBar data={props.dataset}
+                    <V.VictoryBar data={query}
                     x="Opdracht"
                     y="Leuk"
                     />
                     </V.VictoryChart>
                     <h2>Leukheid</h2>
                     <V.VictoryChart>
-                    <V.VictoryBar data={props.dataset}
+                    <V.VictoryBar data={query}
                     x="Opdracht"
                     y="Moeilijk"
                     />
-                    </V.VictoryChart> */}
+                    </V.VictoryChart>
       </div>
-      
-  
-  );
+  )}
 };
 export default Student;
+//   return (
+//       
+      
+  
+//   );
+// };
+// export default Student;
