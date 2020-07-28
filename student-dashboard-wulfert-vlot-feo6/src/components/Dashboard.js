@@ -1,57 +1,66 @@
 import React, {Component} from 'react';
 import Grading from '../resource/data';
 import average from '../resource/gemiddelden';
+import Nav from './Navbar';
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+    Switch,
+  } from 'react-router-dom';
 import * as V from 'victory';
+import Student from './Student';
 
 class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {naam: average};
-      
+        //console.log(this.state.naam);
+        //console.log(`props from dashboard state: ${props.data}`);
       }
     render() {
-        const av = average;
-        const namen = [
-            {id: 0, naam: "Evelyn"},
-            {id: 1, naam: "Aranka"},
-            {id: 2, naam: "Floris"},
-            {id: 3, naam: "Hector"},
-            {id: 4, naam: "Martina"},
-            {id: 5, naam: "Maurits"},
-            {id: 6, naam: "Rahima"},
-            {id: 7, naam: "Sandra"},
-            {id: 8, naam: "Wietske"},
-            {id: 9, naam: "Storm"}
-        ];
+        const av = this.state.naam;
+        // const namen = [
+        //     {id: 0, naam: "Evelyn"},
+        //     {id: 1, naam: "Aranka"},
+        //     {id: 2, naam: "Floris"},
+        //     {id: 3, naam: "Hector"},
+        //     {id: 4, naam: "Martina"},
+        //     {id: 5, naam: "Maurits"},
+        //     {id: 6, naam: "Rahima"},
+        //     {id: 7, naam: "Sandra"},
+        //     {id: 8, naam: "Wietske"},
+        //     {id: 9, naam: "Storm"}
+        // ];
         const Evelyn =  Grading.filter(function(deel) {
-            return deel.Naam == "Evelyn";
+            return deel.Naam === "Evelyn";
         });
         const Aranka =  Grading.filter(function(deel) {
-            return deel.Naam == "Aranka";
+            return deel.Naam === "Aranka";
         });
         const Floris =  Grading.filter(function(deel) {
-            return deel.Naam == "Floris";
+            return deel.Naam === "Floris";
         });
         const Hector =  Grading.filter(function(deel) {
-            return deel.Naam == "Hector";
+            return deel.Naam === "Hector";
         });
         const Martina =  Grading.filter(function(deel) {
-            return deel.Naam == "Martina";
+            return deel.Naam === "Martina";
         });
         const Maurits =  Grading.filter(function(deel) {
-            return deel.Naam == "Maurits";
+            return deel.Naam === "Maurits";
         });
         const Rahima =  Grading.filter(function(deel) {
-            return deel.Naam == "Rahima";
+            return deel.Naam === "Rahima";
         });
         const Sandra =  Grading.filter(function(deel) {
-            return deel.Naam == "Sandra";
+            return deel.Naam === "Sandra";
         });
         const Wietske =  Grading.filter(function(deel) {
-            return deel.Naam == "Wietske";
+            return deel.Naam === "Wietske";
         });
         const Storm =  Grading.filter(function(deel) {
-            return deel.Naam == "Storm";
+            return deel.Naam === "Storm";
         });
         const handleClickEvlyn = (event) => {
             this.setState({naam: Evelyn});
@@ -76,7 +85,6 @@ class Dashboard extends Component {
         const handleClickMaurits = (event) => {
             this.setState({naam: Maurits});
             event.preventDefault();
-            console.log(Evelyn)
         }
         const handleClickRahima = (event) => {
             this.setState({naam: Rahima});
@@ -96,35 +104,39 @@ class Dashboard extends Component {
         }
         return (
             <div>
+                <Nav/>
                 <ul>
                     Klik op een naam voor de bijbehorende resultaten
-                    <li onClick={handleClickEvlyn}>Evelyn   </li>
-                    <li onClick={handleClickAranka}>Aranka</li>
-                    <li onClick={handleClickFloris}>Floris</li>
-                    <li onClick={handleClickHector}>Hector</li>
-                    <li onClick={handleClickMartina}>Martina</li>
-                    <li onClick={handleClickMaurits}>Maurits</li>
-                    <li onClick={handleClickRahima}>Rahima</li>
-                    <li onClick={handleClickSandra}>Sandra</li>
-                    <li onClick={handleClickWietske}>Wietske</li>
-                    <li onClick={handleClickStorm}>Storm</li>
+                    <Router>
+                        <Route path="/Evelyn" component={Student}/>
+                        <li onClick={handleClickAranka}>Aranka</li>
+                        <li onClick={handleClickFloris}>Floris</li>
+                        <li onClick={handleClickHector}>Hector</li>
+                        <li onClick={handleClickMartina}>Martina</li>
+                        <li onClick={handleClickMaurits}>Maurits</li>
+                        <li onClick={handleClickRahima}>Rahima</li>
+                        <li onClick={handleClickSandra}>Sandra</li>
+                        <li onClick={handleClickWietske}>Wietske</li>
+                        <li onClick={handleClickStorm}>Storm</li>
+                    </Router>
                 </ul>
                 <h1>Dashboard</h1>
                 <h2>Moeilijkheid</h2>
-                <V.VictoryChart
+                <Student dataset={this.state.naam}/>
+                {/* <V.VictoryChart
                 >
-                    <V.VictoryBar data={this.state.naam}
+                    <V.VictoryBar data={av}
                     x="Opdracht"
                     y="Leuk"
                     />
                     </V.VictoryChart>
                     <h2>Leukheid</h2>
                     <V.VictoryChart>
-                    <V.VictoryBar data={this.state.naam}
+                    <V.VictoryBar data={av}
                     x="Opdracht"
                     y="Moeilijk"
                     />
-                </V.VictoryChart>
+                </V.VictoryChart> */}
             </div>
                 );
             }
