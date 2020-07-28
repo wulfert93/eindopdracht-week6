@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    Switch,
-  } from 'react-router-dom';
-import Student from './Student';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 class Nav extends Component {
   constructor(props) {
@@ -14,16 +8,13 @@ class Nav extends Component {
   }
   render(){
     console.log('navbar present');
-    
-    const handleClickName = (e) => 
-      {
-        this.setState({naam: e.target.id})
-        e.preventDefault();
-    }
     return (
         <div>
-          <h1>Nav Component h1</h1>
+          <h1>Navigatie</h1>
           <Router>
+          <Link to="/Home">
+              <li id="Home">Home</li>
+            </Link>
             <Link to="/Evelyn">
               <li id="Evelyn">Evelyn</li>
             </Link>
@@ -54,11 +45,7 @@ class Nav extends Component {
             <Link to="/Storm">
               <li id="Storm">Storm</li>
             </Link>
-          gekozen naam naam: {this.state.naam}
-            
-       
           </Router>
-          {/* <Student name={this.state.naam}/> */}
         </div>
     )}
   };
