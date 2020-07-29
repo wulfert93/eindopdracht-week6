@@ -6,14 +6,50 @@ import * as V from 'victory';
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-        this.state = {naam: average};
+        this.handleLeukClick = this.handleLeukClick.bind(this);
+        this.handleMoeilijkClick = this.handleMoeilijkClick.bind(this);
+        this.state = 
+        {
+            naam: average,
+            leuk: true,
+            moeilijk: true
+        };
+        
       }
+    handleLeukClick() {
+        if(this.state.leuk === false)
+        {
+            this.setState({leuk: true});
+            console.log(`leuk is: ${this.state.leuk}`);
+        }else if(this.state.leuk === true)
+        {
+            this.setState({leuk: false});
+            console.log(`leuk is: ${this.state.leuk}`);
+        }
+    }
+    handleMoeilijkClick() {
+        if(this.state.moeilijk === false)
+        {
+            this.setState({moeilijk: true});
+        }else if(this.state.moeilijk === true)
+        {
+            this.setState({moeilijk: false});
+        }
+    }
     render() {
         const av = this.state.naam;
+        // let leuk = true;
+        // let moeilijk = true;
+        
+        if(this.state.leuk === true && this.state.moeilijk === true)
+        {
         return (
             <div>
+                {<input type="button" onClick={this.handleLeukClick} value="Leuk"></input>}
+                {<input type="button" onClick={this.handleMoeilijkClick} value="Moeilijk"></input>}
                 <h1>Dashboard</h1>
-                <h2>Moeilijkheid</h2>
+                <h2>Moeilijkheid en Leukheid</h2>
+                
                 <V.VictoryChart>
                 <V.VictoryGroup
                     offset={10}
@@ -33,6 +69,64 @@ class Dashboard extends Component {
                 </V.VictoryChart>
             </div>
                 );
+        }else if(this.state.leuk === true && this.state.moeilijk === false)
+        {
+            return (
+                <div>
+                    {<input type="button" onClick={this.handleLeukClick} value="Leuk"></input>}
+                    {<input type="button" onClick={this.handleMoeilijkClick} value="Moeilijk"></input>}
+                    <h1>Dashboard</h1>
+                    <h2>Leukheid</h2>
+                    
+                    <V.VictoryChart>
+                    <V.VictoryGroup
+                        offset={10}
+                    >
+                        <V.VictoryBar
+                        
+                            data={av}
+                            x="Opdracht"
+                            y="Leuk"
+                        />
+                    </V.VictoryGroup>
+                    </V.VictoryChart>
+                </div>
+                    );
+        }else if(this.state.moeilijk === true && this.state.leuk === false)
+        {
+            return (
+                <div>
+                    {<input type="button" onClick={this.handleLeukClick} value="Leuk"></input>}
+                    {<input type="button" onClick={this.handleMoeilijkClick} value="Moeilijk"></input>}
+                    <h1>Dashboard</h1>
+                    <h2>Moeilijkheid</h2>
+                    
+                    <V.VictoryChart>
+                    <V.VictoryGroup
+                        offset={10}
+                    >
+                        <V.VictoryBar 
+                        
+                            data={av}
+                            x="Opdracht"
+                            y="Moeilijk"/>
+                    </V.VictoryGroup>
+                    </V.VictoryChart>
+                </div>
+                    );
+        }else
+        {
+            return (
+                <div>
+                    {<input type="button" onClick={this.handleLeukClick} value="Leuk"></input>}
+                    {<input type="button" onClick={this.handleMoeilijkClick} value="Moeilijk"></input>}
+                    <h1>Dashboard</h1>
+                    <h2>Niets weer te geven</h2>
+                    
+                    
+                </div>
+                    );
+        }
             }
 }
   export default Dashboard;

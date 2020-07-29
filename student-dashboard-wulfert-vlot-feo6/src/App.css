@@ -22,3 +22,12 @@ ul li:hover{
 .chart{
     background-color: whitesmoke;
 }
+input[type=button]{
+    background-color:rgb(240, 185, 194);
+    font-size: 16px;
+    border-style: solid;
+}
+input[type=button]:hover{
+    color: rgb(122, 26, 114);
+    font-size: larger;   
+}
