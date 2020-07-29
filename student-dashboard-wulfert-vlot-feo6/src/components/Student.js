@@ -14,17 +14,15 @@ class Student extends Component{
     };
   }
   componentDidMount() {
-     
+    
   }
   handleLeukClick() {
     if(this.state.leuk === false)
     {
         this.setState({leuk: true});
-        console.log(`leuk is: ${this.state.leuk}`);
     }else if(this.state.leuk === true)
     {
         this.setState({leuk: false});
-        console.log(`leuk is: ${this.state.leuk}`);
     }
 }
 handleMoeilijkClick() {
@@ -37,7 +35,7 @@ handleMoeilijkClick() {
     }
 }
   render(){
-    console.log(this.state.name)
+
     const name = this.state.name;
     const query =  Grading.filter(function(deel) 
     {

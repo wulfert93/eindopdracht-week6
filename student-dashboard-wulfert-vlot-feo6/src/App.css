@@ -26,6 +26,7 @@ input[type=button]{
     background-color:rgb(240, 185, 194);
     font-size: 16px;
     border-style: solid;
+    border-color:  rgb(122, 26, 114);
 }
 input[type=button]:hover{
     color: rgb(122, 26, 114);

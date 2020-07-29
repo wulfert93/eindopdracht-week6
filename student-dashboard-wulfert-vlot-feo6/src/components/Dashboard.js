@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 //import Grading from '../resource/data';
 import average from '../resource/gemiddelden';
 import * as V from 'victory';
+import Grading from '../resource/data';
+import { findByLabelText } from '@testing-library/react';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -20,11 +22,9 @@ class Dashboard extends Component {
         if(this.state.leuk === false)
         {
             this.setState({leuk: true});
-            console.log(`leuk is: ${this.state.leuk}`);
         }else if(this.state.leuk === true)
         {
             this.setState({leuk: false});
-            console.log(`leuk is: ${this.state.leuk}`);
         }
     }
     handleMoeilijkClick() {
@@ -38,6 +38,14 @@ class Dashboard extends Component {
     }
     render() {
         const av = this.state.naam;
+        const reeksInit = Array.from(Grading);
+        console.log(reeksInit);
+        let reeks = [];
+        console.log(typeof reeks)
+        for(let i = 0; i<56; i++){
+            reeks.push(reeksInit[i].Opdracht)
+        }
+        console.log(`alle opdrachten: ${reeks}`);
         // let leuk = true;
         // let moeilijk = true;
         
@@ -59,13 +67,38 @@ class Dashboard extends Component {
                         data={av}
                         x="Opdracht"
                         y="Leuk"
+                        tickValues={reeks}
                     />
                     <V.VictoryBar 
                     
                         data={av}
                         x="Opdracht"
-                        y="Moeilijk"/>
+                        y="Moeilijk"
+                        tickValues={reeks}
+                        
+                    />
+                    {/* <V.VictoryAxis
+                        fixLabelOverlap
+                        style={{
+                            tickLabels:
+                            {
+                                fontsize: 4,
+                                angle: 50
+                            }
+                        }}
+                    ></V.VictoryAxis> */}
                 </V.VictoryGroup>
+                <V.VictoryAxis
+                        tickValues={reeks}
+                        
+                        style={{
+                            tickLabels:{
+                                
+                                fontSize: 6,    
+                                angle: 60
+                            }
+                        }}
+                     />
                 </V.VictoryChart>
             </div>
                 );
