@@ -15,15 +15,21 @@ class Dashboard extends Component {
                 <h1>Dashboard</h1>
                 <h2>Moeilijkheid</h2>
                 <V.VictoryChart>
-                    <V.VictoryBar data={av}
-                    x="Opdracht"
-                    y="Leuk"/>
-                    </V.VictoryChart>
-                    <h2>Leukheid</h2>
-                    <V.VictoryChart>
-                    <V.VictoryBar data={av}
-                    x="Opdracht"
-                    y="Moeilijk"/>
+                <V.VictoryGroup
+                    offset={10}
+                >
+                    <V.VictoryBar
+                    
+                        data={av}
+                        x="Opdracht"
+                        y="Leuk"
+                    />
+                    <V.VictoryBar 
+                    
+                        data={av}
+                        x="Opdracht"
+                        y="Moeilijk"/>
+                </V.VictoryGroup>
                 </V.VictoryChart>
             </div>
                 );
