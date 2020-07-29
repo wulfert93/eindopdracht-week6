@@ -41,6 +41,11 @@ handleMoeilijkClick() {
     {
       return deel.Naam === name;
     });
+    const reeksInit = Array.from(Grading);
+    let reeks = [];
+    for(let i = 0; i<56; i++){
+      reeks.push(reeksInit[i].Opdracht)
+    }
     if(this.state.leuk === true && this.state.moeilijk === true)
     {
     return (
@@ -66,6 +71,19 @@ handleMoeilijkClick() {
                     x="Opdracht"
                     y="Moeilijk"/>
             </V.VictoryGroup>
+            <V.VictoryAxis
+                        tickValues={reeks}
+                        style={{
+                            tickLabels:{
+                                
+                                padding: 8,
+                                baselineShift: 8,
+                                wordSpacing: 5,
+                                fontSize: 6,    
+                                angle: 60
+                            }
+                        }}
+                     />
             </V.VictoryChart>
         </div>
             );
@@ -89,6 +107,19 @@ handleMoeilijkClick() {
                         y="Leuk"
                     />
                 </V.VictoryGroup>
+                <V.VictoryAxis
+                        tickValues={reeks}
+                        style={{
+                            tickLabels:{
+                                
+                                padding: 8,
+                                baselineShift: 8,
+                                wordSpacing: 5,
+                                fontSize: 6,    
+                                angle: 60
+                            }
+                        }}
+                     />
                 </V.VictoryChart>
             </div>
                 );
@@ -111,6 +142,19 @@ handleMoeilijkClick() {
                         x="Opdracht"
                         y="Moeilijk"/>
                 </V.VictoryGroup>
+                <V.VictoryAxis
+                        tickValues={reeks}
+                        style={{
+                            tickLabels:{
+                                
+                                padding: 8,
+                                baselineShift: 8,
+                                wordSpacing: 5,
+                                fontSize: 6,    
+                                angle: 60
+                            }
+                        }}
+                     />
                 </V.VictoryChart>
             </div>
                 );

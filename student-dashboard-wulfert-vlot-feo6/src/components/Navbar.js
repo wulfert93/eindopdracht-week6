@@ -10,7 +10,7 @@ class Nav extends Component {
     console.log('navbar present');
     return (
         <div>
-          <Router>
+         
             <ul>
               <Link to="/Home">
                 <li id="Home">Home</li>
@@ -46,7 +46,7 @@ class Nav extends Component {
                 <li id="Storm">Storm</li>
               </Link>
             </ul>
-          </Router>
+        
         </div>
     )}
   };

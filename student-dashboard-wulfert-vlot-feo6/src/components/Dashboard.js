@@ -90,15 +90,18 @@ class Dashboard extends Component {
                 </V.VictoryGroup>
                 <V.VictoryAxis
                         tickValues={reeks}
-                        
                         style={{
                             tickLabels:{
                                 
+                                padding: 8,
+                                baselineShift: 8,
+                                wordSpacing: 5,
                                 fontSize: 6,    
                                 angle: 60
                             }
                         }}
                      />
+                
                 </V.VictoryChart>
             </div>
                 );
@@ -122,6 +125,19 @@ class Dashboard extends Component {
                             y="Leuk"
                         />
                     </V.VictoryGroup>
+                    <V.VictoryAxis
+                        tickValues={reeks}
+                        style={{
+                            tickLabels:{
+                                
+                                padding: 8,
+                                baselineShift: 8,
+                                wordSpacing: 5,
+                                fontSize: 6,    
+                                angle: 60
+                            }
+                        }}
+                     />
                     </V.VictoryChart>
                 </div>
                     );
@@ -144,6 +160,19 @@ class Dashboard extends Component {
                             x="Opdracht"
                             y="Moeilijk"/>
                     </V.VictoryGroup>
+                    <V.VictoryAxis
+                        tickValues={reeks}
+                        style={{
+                            tickLabels:{
+                                
+                                padding: 8,
+                                baselineShift: 8,
+                                wordSpacing: 5,
+                                fontSize: 6,    
+                                angle: 60
+                            }
+                        }}
+                     />
                     </V.VictoryChart>
                 </div>
                     );
