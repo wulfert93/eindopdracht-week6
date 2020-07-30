@@ -35,18 +35,12 @@ handleMoeilijkClick() {
     }
 }
   render(){
-
+    const reeks = [...new Set(Grading.map(data => data.Opdracht))]
     const name = this.state.name;
     const query =  Grading.filter(function(deel) 
     {
       return deel.Naam === name;
     });
-    console.log(query);
-    const reeksInit = Array.from(Grading);
-    let reeks = [];
-    for(let i = 0; i<56; i++){
-      reeks.push(reeksInit[i].Opdracht)
-    }
     if(this.state.leuk && this.state.moeilijk)
     {
     return (
@@ -66,12 +60,14 @@ handleMoeilijkClick() {
                     x="Opdracht"
                     y="Leuk"
                     style={{ data: { fill: "rgb(226, 47, 211)" } }}
+                    tickValues={reeks}
                 />
                 <V.VictoryBar 
                 
                     data={query}
                     x="Opdracht"
                     y="Moeilijk"
+                    tickValues={reeks}
                 />
             </V.VictoryGroup>
             <V.VictoryAxis
@@ -113,6 +109,7 @@ handleMoeilijkClick() {
                         x="Opdracht"
                         y="Leuk"
                         style={{ data: { fill: "rgb(226, 47, 211)" } }}
+                        tickValues={reeks}
                     />
                 </V.VictoryGroup>
                 <V.VictoryAxis
@@ -142,7 +139,7 @@ handleMoeilijkClick() {
             <div>
                 {<input type="button" onClick={this.handleLeukClick} value="Leuk"></input>}
                 {<input type="button" onClick={this.handleMoeilijkClick} value="Moeilijk"></input>}
-                <h1>Dashboard</h1>
+                <h1>{this.state.name}</h1>
                 <h2>Moeilijkheid</h2>
                 
                 <V.VictoryChart>
@@ -154,6 +151,7 @@ handleMoeilijkClick() {
                         data={query}
                         x="Opdracht"
                         y="Moeilijk"
+                        tickValues={reeks}
                     />
                 </V.VictoryGroup>
                 <V.VictoryAxis
@@ -183,7 +181,7 @@ handleMoeilijkClick() {
             <div>
                 {<input type="button" onClick={this.handleLeukClick} value="Leuk"></input>}
                 {<input type="button" onClick={this.handleMoeilijkClick} value="Moeilijk"></input>}
-                <h1>Dashboard</h1>
+                <h1>{this.state.name}</h1>
                 <h2>Niets weer te geven</h2>
                 
                 

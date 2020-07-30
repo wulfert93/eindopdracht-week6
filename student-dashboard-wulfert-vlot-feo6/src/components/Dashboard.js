@@ -34,17 +34,6 @@ class Dashboard extends Component {
     }
     render() {
         const reeks = [...new Set(Grading.map(data => data.Opdracht))]
-        const array = [{
-            Opdracht: '',
-            Moeilijk: 0,
-            Leuk: 0
-        }];
-        for(let i=0;i<reeks.length;i++){
-            array.push({opdracht: reeks[i],
-                moeilijk: 0,
-                leuk: 0
-            })
-        }
         const gemMoeilijkFunctie = (arr) => {
             let sums = {}, counts = {}, results = [], name;
             for (let i = 0; i < arr.length; i++) {
