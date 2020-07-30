@@ -7,103 +7,103 @@
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D1-1",
+            Opdracht: "W1D3-3",
             Moeilijk: 3,
             Leuk: 3
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D2-1",
-            Moeilijk: 1,
+            Opdracht: "W3D2-3",
+            Moeilijk: 3,
             Leuk: 3
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D2-2",
-            Moeilijk: 1,
+            Opdracht: "W3D2-2",
+            Moeilijk: 3,
             Leuk: 4
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D2-3",
+            Opdracht: "W3D2-3",
             Moeilijk: 2,
             Leuk: 3
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D2-4",
+            Opdracht: "W3D2-4",
             Moeilijk: 3,
             Leuk: 4
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D2-5",
+            Opdracht: "W3D2-5",
             Moeilijk: 3,
             Leuk: 4
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D3-1",
+            Opdracht: "W3D3-3",
             Moeilijk: 3,
             Leuk: 4
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D3-2",
+            Opdracht: "W3D3-2",
             Moeilijk: 3,
             Leuk: 4
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D3-4",
+            Opdracht: "W3D3-4",
             Moeilijk: 4,
             Leuk: 4
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D3-5",
+            Opdracht: "W3D3-5",
             Moeilijk: 4,
             Leuk: 4
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D3 - Project - Guess-the-number",
-            Moeilijk: "5",
-            Leuk: "5"
+            Opdracht: "W3D3 - Project - Guess-the-number",
+            Moeilijk: 5,
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D4-1",
+            Opdracht: "W3D4-3",
             Moeilijk: 4,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D4 - Project - Kleurentoggle",
+            Opdracht: "W3D4 - Project - Kleurentoggle",
             Moeilijk: 3,
             Leuk: 4
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W1D5 - Project - Galgje",
+            Opdracht: "W3D5 - Project - Galgje",
             Moeilijk: 3,
             Leuk: 3
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W2D1-1",
-            Moeilijk: 1,
-            Leuk: "5"
+            Opdracht: "W2D3-3",
+            Moeilijk: 3,
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W2D1-2",
+            Opdracht: "W2D3-2",
             Moeilijk: 2,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W2D2-1",
+            Opdracht: "W2D2-3",
             Moeilijk: 3,
             Leuk: 4
         },
@@ -121,14 +121,14 @@
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W2D3-1",
+            Opdracht: "W2D3-3",
             Moeilijk: 4,
             Leuk: 4
         },
         {
             Naam: "Evelyn",
             Opdracht: "W2D3-2",
-            Moeilijk: 1,
+            Moeilijk: 3,
             Leuk: 3
         },
         {
@@ -139,8 +139,8 @@
         },
         {
             Naam: "Evelyn",
-            Opdracht: "W2D4-1",
-            Moeilijk: 1,
+            Opdracht: "W2D4-3",
+            Moeilijk: 3,
             Leuk: 3
         },
         {
@@ -201,7 +201,7 @@
             Naam: "Evelyn",
             Opdracht: "W3D2-3",
             Moeilijk: 3,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
@@ -213,97 +213,97 @@
             Naam: "Evelyn",
             Opdracht: "W3D3-2",
             Moeilijk: 4,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W3D3-3",
             Moeilijk: 3,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W3D3-4",
             Moeilijk: 4,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W3D4-1",
-            Moeilijk: "5",
-            Leuk: "5"
+            Moeilijk: 5,
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W3D4-2",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W3D5 - Project - Todo-List",
             Moeilijk: 2,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D2-1",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D2-2",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D2-3",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D2-4",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D3-1",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D3-2",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D3-3",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D3-4",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D3-5",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
             Opdracht: "W4D3 - Project - Next-Level CSS",
             Moeilijk: 1,
-            Leuk: "5"
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
@@ -320,8 +320,8 @@
         {
             Naam: "Evelyn",
             Opdracht: "W6D1-1",
-            Moeilijk: "5",
-            Leuk: "5"
+            Moeilijk: 5,
+            Leuk: 5
         },
         {
             Naam: "Evelyn",
@@ -332,8 +332,8 @@
         {
             Naam: "Evelyn",
             Opdracht: "W6D2 - Project - Eindopdracht",
-            Moeilijk: "5",
-            Leuk: "5"
+            Moeilijk: 5,
+            Leuk: 5
         },
         {
             Naam: "Aranka",
