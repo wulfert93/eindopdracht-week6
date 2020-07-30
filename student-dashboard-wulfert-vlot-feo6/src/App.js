@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 import Nav from './components/Navbar';
 import Student from './components/Student';
 import Dashboard from './components/Dashboard';
@@ -13,7 +13,10 @@ const App = () => {
         {/*Router => 1* Nav component, 1* Dashboard component en per naam een route die Student component rendert */}
           <Nav/>
           {/* <Dashboard/> */}
-          <Route 
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+          <Route
             path="/Home" 
             render={(props) => (<Dashboard {...props} name={'av'} />)}
           />
