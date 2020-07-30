@@ -54,7 +54,7 @@ handleMoeilijkClick() {
             {<input type="button" onClick={this.handleLeukClick} value="Leuk"></input>}
             {<input type="button" onClick={this.handleMoeilijkClick} value="Moeilijk"></input>}
             <h1>{this.state.name}</h1>
-            <h2>Moeilijkheid en Leukheid</h2>
+            <h2>Moeilijkheid en </h2><h2 className="color">Leukheid</h2>
             
             <V.VictoryChart>
             <V.VictoryGroup
@@ -65,12 +65,14 @@ handleMoeilijkClick() {
                     data={query}
                     x="Opdracht"
                     y="Leuk"
+                    style={{ data: { fill: "rgb(226, 47, 211)" } }}
                 />
                 <V.VictoryBar 
                 
                     data={query}
                     x="Opdracht"
-                    y="Moeilijk"/>
+                    y="Moeilijk"
+                />
             </V.VictoryGroup>
             <V.VictoryAxis
                         tickValues={reeks}
@@ -99,8 +101,7 @@ handleMoeilijkClick() {
             <div>
                 {<input type="button" onClick={this.handleLeukClick} value="Leuk"></input>}
                 {<input type="button" onClick={this.handleMoeilijkClick} value="Moeilijk"></input>}
-                <h1>Dashboard</h1>
-                <h2>Leukheid</h2>
+                <h2 className="color">Leukheid</h2>
                 
                 <V.VictoryChart>
                 <V.VictoryGroup
@@ -111,6 +112,7 @@ handleMoeilijkClick() {
                         data={query}
                         x="Opdracht"
                         y="Leuk"
+                        style={{ data: { fill: "rgb(226, 47, 211)" } }}
                     />
                 </V.VictoryGroup>
                 <V.VictoryAxis
@@ -151,7 +153,8 @@ handleMoeilijkClick() {
                     
                         data={query}
                         x="Opdracht"
-                        y="Moeilijk"/>
+                        y="Moeilijk"
+                    />
                 </V.VictoryGroup>
                 <V.VictoryAxis
                         tickValues={reeks}
@@ -189,10 +192,3 @@ handleMoeilijkClick() {
     }}
 };
 export default Student;
-//   return (
-//       
-      
-  
-//   );
-// };
-// export default Student;
